@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+type InputProps = {
+  value: string;
+  onChange: (e: any) => void;
+};
 
-export const Input = ({ render }: any) => {
-  const [value, setValue] = useState('');
-  // const handleValue = (e: React.FormEvent<HTMLElement>) => setValue(e.target.value);
+export const Input = ({ value, onChange }: InputProps) => {
   return (
     <>
-      <input
-        type="text"
-        name="value"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder="Enter value"
-      />
-      {render(value)}
+      <input type="text" name="value" placeholder="Enter value" value={value} onChange={onChange} />
     </>
   );
 };
