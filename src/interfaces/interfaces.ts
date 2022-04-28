@@ -1,7 +1,16 @@
 export interface AllData {
-  name: string[];
-  tld: string[];
-  cca2: string;
+  name: {
+    common: string;
+    nativeName: {
+      msa: {
+        common: string;
+        official: string;
+      };
+    };
+    official: string;
+  };
+
+  c2: string;
   ccn3: string;
   cca3: string;
   cioc: string;
@@ -34,4 +43,8 @@ export interface AllData {
   startOfWeek: string;
   capitalInfo: string[];
   postalCode: string[];
+}
+
+export interface CountryProps {
+  country: AllData;
 }
