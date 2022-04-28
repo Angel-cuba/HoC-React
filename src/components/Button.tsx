@@ -1,13 +1,6 @@
 import classNames from 'classnames';
 import '../sass/Scss.Components.scss';
-
-type ButtonProps = {
-  label: string;
-  size: 'sm' | 'md' | 'lg';
-  // backgroundColor: 'red' | 'blue' | 'green';
-  className: string;
-  onClick: () => void;
-};
+import { ButtonProps } from '../types/types';
 
 const Button = ({ label, size, onClick }: ButtonProps) => {
   const styles = classNames({
