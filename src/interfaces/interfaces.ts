@@ -1,15 +1,7 @@
-export interface AllData {
-  name: {
-    common: string;
-    nativeName: {
-      msa: {
-        common: string;
-        official: string;
-      };
-    };
-    official: string;
-  };
+import { CountryCurrencies, CountryName } from '../types/CountryTypes';
 
+export interface AllData {
+  name: CountryName;
   c2: string;
   ccn3: string;
   cca3: string;
@@ -17,7 +9,7 @@ export interface AllData {
   independent: boolean;
   status: string;
   unMember: boolean;
-  currencies: string[];
+  currencies: CountryCurrencies;
   idd: string[];
   capital: string[];
   altSpellings: string[];

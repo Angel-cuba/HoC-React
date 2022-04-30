@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import '../sass/Scss.Components.scss';
-import { ButtonProps } from '../types/types';
+import { ButtonProps } from '../types/ComponentsTypes';
 
 const Button = ({ label, size, onClick }: ButtonProps) => {
   const styles = classNames({
